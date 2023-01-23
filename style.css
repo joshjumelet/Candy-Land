@@ -2,7 +2,7 @@ h1 {
   text-align: center;
 }
 
-.game-board {
+#game-board {
   display: grid;
   grid-template-columns: 120px 120px 120px 120px 120px 120px 120px 120px 120px 120px;
   grid-template-rows: 120px 120px 120px 120px 120px;
@@ -37,3 +37,18 @@ h1 {
 .green {
   background-color: green;
 }
+
+.playerOne {
+  width: 25px;
+  height: 25px;
+  background-color: black;
+  position: relative;
+}
+
+.playerTwo {
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  position: relative;
+}
+
