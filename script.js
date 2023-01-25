@@ -3,9 +3,9 @@ const spaces = document.querySelectorAll('.space')
 
 const gameboard = document.querySelector('#game-board')
 
-const startSpace = document.getElementById('sp0')
+const startSpace = document.getElementById('0')
 
-const winSpace = document.getElementById('sp31')
+const winSpace = document.getElementById('31')
 
 const playerOne = document.createElement('div')
 
@@ -38,12 +38,9 @@ class Deck {
     this.deck = []
 
     const colors = ['red', 'purple', 'yellow', 'blue', 'orange', 'green']
-    const values = ['1', '2', '3', '4', '5', '6', '7']
 
     for (let color in colors) {
-      for (let value in values) {
-        this.deck.push(`${colors[color]} ${values[value]}`)
-      }
+      this.deck.push(`${colors[color]}`)
     }
   }
 }
@@ -89,7 +86,29 @@ let drawCard = () => {
   let randomCard = Math.floor(Math.random() * colorDeck.deck.length)
   cardDrawn = colorDeck.deck[randomCard]
   console.log(cardDrawn)
+  boardMovement(cardDrawn)
 }
-// drawCard()
 
 drawCardButton.addEventListener('click', drawCard)
+
+const boardMovement = (color) => {
+  let spaceArray = []
+  const colorSpaces = document.querySelectorAll(`.${color}`)
+  for (let i = 0; i < colorSpaces.length; i++) {
+    spaceArray.push(parseInt(colorSpaces[i].id))
+  }
+  spaceArray.sort((a, b) => {
+    return a - b
+  })
+  console.log(spaceArray)
+
+  spaceArray.forEach((space) => {
+
+  })
+  // colorSpaces.forEach((space) => {
+  //   const id = space.getAttribute('id')
+  //   id.sort
+  //   console.log(id)
+  })
+  return
+}
