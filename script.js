@@ -130,3 +130,9 @@ const endGame = () => {
     return
   }
 }
+
+const resetGame = () => {
+  location.reload()
+}
+
+resetButton.addEventListener('click', () => resetGame())
