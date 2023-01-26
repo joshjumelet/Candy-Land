@@ -1,3 +1,22 @@
+.mainPage {
+  /* background-image: url('/images'); */
+  background-size: 100% 75%;
+  background-repeat: no-repeat;
+}
+
+.container {
+  margin: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.rulesList {
+  list-style: none;
+}
+
 h1 {
   text-align: center;
 }
