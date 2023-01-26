@@ -13,17 +13,25 @@ const playerTwo = document.createElement('div')
 
 const drawCardButton = document.getElementById('draw-card')
 
-let playerOneSpace = 0
-
-let playerTwoSpace = 0
-
-let playersTurn = 1
+// let color
 
 let cardDrawn
 
-let element = ''
+let turn = 1
+
+let boardColors = ['red', 'purple', 'yellow', 'blue', 'orange', 'green']
 
 console.log(spaces)
+
+class Deck {
+  constructor() {
+    this.deck = []
+    const colors = ['red', 'purple', 'yellow', 'blue', 'orange', 'green']
+    for (let color in colors) {
+      this.deck.push(`${colors[color]}`)
+    }
+  }
+}
 
 let createPlayers = () => {
   playerOne.classList.add('playerOne')
@@ -32,61 +40,26 @@ let createPlayers = () => {
   startSpace.appendChild(playerTwo)
 }
 createPlayers()
+console.log(playerOne)
 
-class Deck {
-  constructor() {
-    this.deck = []
+let playerOnePosition = playerOne.parentNode.id
 
-    const colors = ['red', 'purple', 'yellow', 'blue', 'orange', 'green']
+console.log(playerOnePosition)
 
-    for (let color in colors) {
-      this.deck.push(`${colors[color]}`)
-    }
-  }
-}
+let playerTwoPosition = playerTwo.parentNode.id
+
+console.log(playerTwoPosition)
 
 const colorDeck = new Deck()
 console.log(colorDeck.deck)
-
-const boardSpaces = [
-  'red 1',
-  'purple 1',
-  'yellow 1',
-  'blue 1',
-  'orange 1',
-  'green 1',
-  'red 2',
-  'purple 2',
-  'yellow 2',
-  'blue 2',
-  'orange 2',
-  'green 2',
-  'red 3',
-  'purple 3',
-  'yellow 3',
-  'blue 3',
-  'orange 3',
-  'green 3',
-  'red 4',
-  'purple 4',
-  'yellow 4',
-  'blue 4',
-  'orange 4',
-  'green 4',
-  'red 5',
-  'purple 5',
-  'yellow 5',
-  'blue 5',
-  'orange 5',
-  'green 5',
-  'red 6'
-]
 
 let drawCard = () => {
   let randomCard = Math.floor(Math.random() * colorDeck.deck.length)
   cardDrawn = colorDeck.deck[randomCard]
   console.log(cardDrawn)
   boardMovement(cardDrawn)
+  turn *= -1
+  playersTurn.innerText = `It is the next Players turn`
 }
 
 drawCardButton.addEventListener('click', drawCard)
@@ -94,6 +67,8 @@ drawCardButton.addEventListener('click', drawCard)
 const boardMovement = (color) => {
   let spaceArray = []
   const colorSpaces = document.querySelectorAll(`.${color}`)
+  console.log(colorSpaces)
+
   for (let i = 0; i < colorSpaces.length; i++) {
     spaceArray.push(parseInt(colorSpaces[i].id))
   }
@@ -101,14 +76,48 @@ const boardMovement = (color) => {
     return a - b
   })
   console.log(spaceArray)
-
-  spaceArray.forEach((space) => {
-
-  })
-  // colorSpaces.forEach((space) => {
-  //   const id = space.getAttribute('id')
-  //   id.sort
-  //   console.log(id)
-  })
-  return
+  if (turn === 1) {
+    spaceArray.some((space) => {
+      if (space > parseInt(playerOnePosition)) {
+        console.log(`Player One nextSpace is ${space}`)
+        return true
+      }
+    })
+  } else {
+    spaceArray.some((space) => {
+      if (space > parseInt(playerTwoPosition)) {
+        console.log(`Player Two nextSpace is ${space}`)
+        return turn
+      }
+    })
+  }
 }
+
+// const nextSpace = document.querySelector(`#${}`)
+
+// let playerPosition = document.querySelector(`.${color}`)
+// console.log(playerPosition)
+
+// spaceArray.forEach((space) => {
+//   const id = space.getAttribute('id')
+// const playerMove = space.getAttribute('id')
+// console.log(playerMove)
+
+//   if (playersTurn === 1) {
+//     spaceArray.forEach((space) => {
+//       let playerMove = space.getAttribute('id')
+//       console.log(playerMove)
+//       // playerMove.forEach((a) => {
+//       //   if (playerOneSpace === spaceArray[i]) playerOneSpace.appendChild
+//     })
+//   }
+// }
+
+//   })
+//   // colorSpaces.forEach((space) => {
+//   //   const id = space.getAttribute('id')
+//   //   id.sort
+//   //   console.log(id)
+//   })
+//   return
+// }
