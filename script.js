@@ -123,3 +123,10 @@ const gameWinner = () => {
     return
   }
 }
+
+const endGame = () => {
+  if (gamePlayed === true) {
+    drawCardButton.removeEventListener('click', drawCard)
+    return
+  }
+}
