@@ -5,7 +5,7 @@ const gameboard = document.querySelector('#game-board')
 
 const startSpace = document.getElementById('0')
 
-const winSpace = document.getElementById('31')
+const winSpace = 31
 
 const playerOne = document.createElement('div')
 
@@ -105,24 +105,21 @@ const boardMovement = (color) => {
 }
 
 const gameWinner = () => {
-  playerOnePosition = playerOne.parentNode.id
-  playerTwoPosition = playerTwo.parentNode.id
+  playerOnePosition = parseInt(playerOne.parentNode.id)
+  console.log('This should be player one postion: ', playerOnePosition)
+  console.log(winSpace)
   if (playerOnePosition === winSpace) {
     winner.innerText = `Player One has won the game!`
     gamePlayed = true
     endGame()
     return
   }
+  playerTwoPosition = parseInt(playerTwo.parentNode.id)
+  console.log(playerTwoPosition)
   if (playerTwoPosition === winSpace) {
     winner.innerText = `Player Two has won the game!`
     gamePlayed = true
     endGame()
-    return
-  }
-}
-
-const endGame = () => {
-  if (gamePlayed === true) {
     return
   }
 }
