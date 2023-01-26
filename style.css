@@ -1,6 +1,6 @@
 .mainPage {
-  background-image: url;
-  background-size: 100% 75%;
+  background-image: url('Images/73957123-6DBF-4B31-BC3C-5BBD65A9999E_1_201_a.jpeg');
+  background-size: 100% 130%;
   background-repeat: no-repeat;
 }
 
@@ -27,8 +27,6 @@ h1 {
   grid-template-rows: 120px 120px 120px 120px 120px;
   justify-content: center;
 }
-
-
 
 .space {
   background-color: #d9d9d9;
