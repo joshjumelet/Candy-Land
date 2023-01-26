@@ -59,8 +59,7 @@ h1 {
   background-color: green;
 }
 
-img { 
-  /* background-image: url('https://media.istockphoto.com/illustrations/square-shaped-pride-flag-with-rainbow-colors-illustration-id1249352128?k=6&m=1249352128&s=170667a&w=0&h=JP76ZikxY3mJN1bcV3gJd22oYgmzxTriancju0gZsMc=');  */
+.background-image { 
   background-size: contain;
   }
 
