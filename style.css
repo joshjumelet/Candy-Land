@@ -28,6 +28,8 @@ h1 {
   justify-content: center;
 }
 
+
+
 .space {
   background-color: #d9d9d9;
   border: 2px solid black;
@@ -54,8 +56,13 @@ h1 {
 }
 
 .green {
-  background: green;
+  background-color: green;
 }
+
+img { 
+  /* background-image: url('https://media.istockphoto.com/illustrations/square-shaped-pride-flag-with-rainbow-colors-illustration-id1249352128?k=6&m=1249352128&s=170667a&w=0&h=JP76ZikxY3mJN1bcV3gJd22oYgmzxTriancju0gZsMc=');  */
+  background-size: contain;
+  }
 
 .playerOne {
   width: 25px;
@@ -70,4 +77,3 @@ h1 {
   background-color: white;
   position: relative;
 }
-

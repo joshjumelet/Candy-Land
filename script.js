@@ -13,8 +13,6 @@ const playerTwo = document.createElement('div')
 
 const drawCardButton = document.getElementById('draw-card')
 
-// let color
-
 let cardDrawn
 
 let turn = 1
@@ -57,6 +55,7 @@ let drawCard = () => {
   let randomCard = Math.floor(Math.random() * colorDeck.deck.length)
   cardDrawn = colorDeck.deck[randomCard]
   console.log(cardDrawn)
+  cardColor.innerText = `You have drawn a ${cardDrawn} card!`
   boardMovement(cardDrawn)
   turn *= -1
   playersTurn.innerText = `It is the next Players turn`
@@ -68,6 +67,8 @@ const boardMovement = (color) => {
   let spaceArray = []
   const colorSpaces = document.querySelectorAll(`.${color}`)
   console.log(colorSpaces)
+  playerOnePosition = playerOne.parentNode.id
+  playerTwoPosition = playerTwo.parentNode.id
 
   for (let i = 0; i < colorSpaces.length; i++) {
     spaceArray.push(parseInt(colorSpaces[i].id))
@@ -80,6 +81,9 @@ const boardMovement = (color) => {
     spaceArray.some((space) => {
       if (space > parseInt(playerOnePosition)) {
         console.log(`Player One nextSpace is ${space}`)
+        let newSpace = space.toString()
+        const newDiv = document.getElementById(newSpace)
+        newDiv.appendChild(playerOne)
         return true
       }
     })
@@ -87,37 +91,11 @@ const boardMovement = (color) => {
     spaceArray.some((space) => {
       if (space > parseInt(playerTwoPosition)) {
         console.log(`Player Two nextSpace is ${space}`)
-        return turn
+        let newSpace = space.toString()
+        const newDiv = document.getElementById(newSpace)
+        newDiv.appendChild(playerTwo)
+        return true
       }
     })
   }
 }
-
-// const nextSpace = document.querySelector(`#${}`)
-
-// let playerPosition = document.querySelector(`.${color}`)
-// console.log(playerPosition)
-
-// spaceArray.forEach((space) => {
-//   const id = space.getAttribute('id')
-// const playerMove = space.getAttribute('id')
-// console.log(playerMove)
-
-//   if (playersTurn === 1) {
-//     spaceArray.forEach((space) => {
-//       let playerMove = space.getAttribute('id')
-//       console.log(playerMove)
-//       // playerMove.forEach((a) => {
-//       //   if (playerOneSpace === spaceArray[i]) playerOneSpace.appendChild
-//     })
-//   }
-// }
-
-//   })
-//   // colorSpaces.forEach((space) => {
-//   //   const id = space.getAttribute('id')
-//   //   id.sort
-//   //   console.log(id)
-//   })
-//   return
-// }
