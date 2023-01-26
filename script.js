@@ -17,6 +17,8 @@ let cardDrawn
 
 let turn = 1
 
+gamePlayed = false
+
 let boardColors = ['red', 'purple', 'yellow', 'blue', 'orange', 'green']
 
 console.log(spaces)
@@ -84,6 +86,7 @@ const boardMovement = (color) => {
         let newSpace = space.toString()
         const newDiv = document.getElementById(newSpace)
         newDiv.appendChild(playerOne)
+        gameWinner(newSpace)
         return true
       }
     })
@@ -94,8 +97,32 @@ const boardMovement = (color) => {
         let newSpace = space.toString()
         const newDiv = document.getElementById(newSpace)
         newDiv.appendChild(playerTwo)
+        gameWinner(newSpace)
         return true
       }
     })
+  }
+}
+
+const gameWinner = () => {
+  playerOnePosition = playerOne.parentNode.id
+  playerTwoPosition = playerTwo.parentNode.id
+  if (playerOnePosition === winSpace) {
+    winner.innerText = `Player One has won the game!`
+    gamePlayed = true
+    endGame()
+    return
+  }
+  if (playerTwoPosition === winSpace) {
+    winner.innerText = `Player Two has won the game!`
+    gamePlayed = true
+    endGame()
+    return
+  }
+}
+
+const endGame = () => {
+  if (gamePlayed === true) {
+    return
   }
 }
