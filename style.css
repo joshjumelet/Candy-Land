@@ -1,7 +1,9 @@
 .mainPage {
   background-image: url('Images/73957123-6DBF-4B31-BC3C-5BBD65A9999E_1_201_a.jpeg');
-  background-size: 100% 130%;
+  background-size: 100% 120%;
   background-repeat: no-repeat;
+  font-family: 'Bubblegum Sans', cursive;
+  color: white;
 }
 
 .container {
@@ -15,10 +17,21 @@
 
 .rulesList {
   list-style: none;
+  font-size: 25px;
 }
 
 h1 {
   text-align: center;
+  font-size: 75px;
+  margin: -10px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+p {
+  font-size: 25px;
 }
 
 #game-board {
