@@ -176,6 +176,20 @@ h3 {
   margin: 15px;
 }
 
+#return {
+  background-color: palevioletred;
+  font-family: 'Bubblegum Sans', cursive;
+  font-size: 15px;
+  padding: 6px 18px;
+  border-radius: 8px;
+  border: 2px solid white;
+  color: white;
+  transition-duration: 0.4s;
+}
+
+#return:hover {
+  background-color: pink;
+}
 /* .card {
   display: flex;
   flex-direction: row;
