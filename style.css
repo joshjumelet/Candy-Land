@@ -111,21 +111,7 @@ p {
   background-image: url('./candy-land-piece-1.png');
   background-size: contain;
   position: relative;
-  /* margin: 2px;
-  animation: slide-right 4s; */
 }
-
-/* @keyframes slide-right {
-  from {
-    margin-left: 0px;
-  }
-  50% {
-    margin-left: 100px;
-  }
-  to {
-    margin-left: 200px;
-  }
-} */
 
 .playerTwo {
   width: 45px;

@@ -8,7 +8,7 @@ General Assembly Unit 1 project developed utilizing HTML, CSS and JavaScript.
 
 [LinkedIn](www.linkedin.com/in/joshua-jumelet-155a13251) |
 [GitHub](https://github.com/joshjumelet) |
-[Trello](https://trello.com/b/AFHwL7eK/candy-land-project-board)
+[Trello](https://trello.com/b/AFHwL7eK/candy-land-project-board) |
 [Surge](https://candy-land-game.surge.sh/)
 
 ---
@@ -58,6 +58,10 @@ General Assembly Unit 1 project developed utilizing HTML, CSS and JavaScript.
 
 ### Credits
 
-##### Images: [DuckDuckGo Search](https://duckduckgo.com/?t=hc&va=b)
+##### Images: [Bing Search](https://www.bing.com/images/feed?form=Z9LH)
+
+##### Fonts: [Google Fonts](https://fonts.google.com/)
+
+##### Resource: [MDN Web Docs](https://developer.mozilla.org/en-US/)
 
 ##### Markdown Cheatsheet: [GitHub](https://github.com/joshjumelet/u1_hw_markdown)
