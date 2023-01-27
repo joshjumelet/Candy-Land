@@ -60,7 +60,9 @@ let drawCard = () => {
   cardColor.innerText = `You have drawn a ${cardDrawn} card!`
   boardMovement(cardDrawn)
   turn *= -1
-  playersTurn.innerText = `It is the next Players turn`
+  playersTurn.innerText = `It's time for player ${
+    turn === 1 ? 'One' : 'Two'
+  } to choose a card!`
 }
 
 drawCardButton.addEventListener('click', drawCard)
