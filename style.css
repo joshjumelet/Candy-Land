@@ -1,13 +1,11 @@
 .mainPage {
-  background-image: url('Images/73957123-6DBF-4B31-BC3C-5BBD65A9999E_1_201_a.jpeg');
-  background-size: 100% 120%;
-  background-repeat: no-repeat;
+  background-color: lightskyblue;
   font-family: 'Bubblegum Sans', cursive;
   color: white;
 }
 
 .container {
-  margin: 10%;
+  margin: 12%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,6 +30,31 @@ h2 {
 
 p {
   font-size: 25px;
+}
+
+#start {
+  background-color: palevioletred;
+  font-family: 'Bubblegum Sans', cursive;
+  font-size: 30px;
+  padding: 14px 40px;
+  border-radius: 8px;
+  border: 2px solid white;
+  color: white;
+  transition-duration: 0.4s;
+}
+
+#start:hover {
+  background-color: pink;
+}
+
+body {
+  background-color: lightskyblue;
+}
+
+.gameHeader {
+  font-family: 'Bubblegum Sans', cursive;
+  color: white;
+  margin: 20px;
 }
 
 #game-board {
@@ -92,4 +115,35 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+
+#draw-card {
+  background-color: palevioletred;
+  font-family: 'Bubblegum Sans', cursive;
+  font-size: 15px;
+  padding: 6px 18px;
+  border-radius: 8px;
+  border: 2px solid white;
+  color: white;
+  transition-duration: 0.4s;
+}
+
+#draw-card:hover {
+  background-color: pink;
+}
+
+#resetButton {
+  background-color: palevioletred;
+  font-family: 'Bubblegum Sans', cursive;
+  font-size: 15px;
+  padding: 6px 18px;
+  border-radius: 8px;
+  border: 2px solid white;
+  color: white;
+  transition-duration: 0.4s;
+}
+
+#resetButton:hover {
+  background-color: pink;
 }
