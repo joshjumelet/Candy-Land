@@ -9,6 +9,7 @@ General Assembly Unit 1 project developed utilizing HTML, CSS and JavaScript.
 [LinkedIn](www.linkedin.com/in/joshua-jumelet-155a13251) |
 [GitHub](https://github.com/joshjumelet) |
 [Trello](https://trello.com/b/AFHwL7eK/candy-land-project-board)
+[Surge](https://candy-land-game.surge.sh/)
 
 ---
 
@@ -40,7 +41,11 @@ General Assembly Unit 1 project developed utilizing HTML, CSS and JavaScript.
 
 ![Image](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg1.etsystatic.com%2F003%2F0%2F5690848%2Fil_fullxfull.382288035_eyla.jpg&f=1&nofb=1&ipt=3b8ca7bfc97b6afc887d6db095d61d02b151855e283d6815f97ba7f7e08b9d4f&ipo=images)
 
----
+### _Candy Land Final Product_
+
+##### Final Game Board Design:
+
+## ![Image](Images/85020844-6CD4-43A8-921C-9019E9A9423E.jpeg)
 
 ### _Future Updates_
 

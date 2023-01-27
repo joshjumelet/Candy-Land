@@ -111,8 +111,21 @@ p {
   background-image: url('./candy-land-piece-1.png');
   background-size: contain;
   position: relative;
-  margin: 2px;
+  /* margin: 2px;
+  animation: slide-right 4s; */
 }
+
+/* @keyframes slide-right {
+  from {
+    margin-left: 0px;
+  }
+  50% {
+    margin-left: 100px;
+  }
+  to {
+    margin-left: 200px;
+  }
+} */
 
 .playerTwo {
   width: 45px;
@@ -165,16 +178,37 @@ h3 {
   font-family: 'Bubblegum Sans', cursive;
   color: white;
   text-shadow: -1px 0 palevioletred, 0 1px palevioletred, 1px 0 palevioletred, 0 -1px palevioletred;
-  font-size: 20px;
+  font-size: 25px;
+  margin: 15px;
 }
 
 #cardColor {
   font-family: 'Bubblegum Sans', cursive;
   color: white;
   text-shadow: -1px 0 palevioletred, 0 1px palevioletred, 1px 0 palevioletred, 0 -1px palevioletred;
-  font-size: 20px;
+  font-size: 25px;
+  margin: 15px;
+}
+
+/* .card {
+  display: flex;
+  flex-direction: row;
+  align-content: flex-start;
 }
 
 .card-red {
-
-}
+  color: #c0c0c0;
+  background: #f0f0f0;
+  background-image: url('https://th.bing.com/th/id/R.16cb503337de97cb8a2d899380f3ae44?rik=ND9VNU%2fa0PVnow&riu=http%3a%2f%2fwww.iconsdb.com%2ficons%2fdownload%2fred%2fsquare-32.png&ehk=ZrdtkcKAHTtS1oklieq3xH94Y5C705qTTH7pcFyblPA%3d&risl=&pid=ImgRaw&r=0');
+  background-size: 25px 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 4px;
+  width: 50px;
+  height: 85px;
+  position: relative;
+  display: flex;
+  align-self: start;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+  margin: auto;
+} */
