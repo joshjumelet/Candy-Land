@@ -2,6 +2,7 @@
   background-color: lightskyblue;
   font-family: 'Bubblegum Sans', cursive;
   color: white;
+  margin: auto;
 }
 
 .container {
@@ -16,20 +17,24 @@
 .rulesList {
   list-style: none;
   font-size: 25px;
+  text-shadow: -1px 0 palevioletred, 0 1px palevioletred, 1px 0 palevioletred, 0 -1px palevioletred;
 }
 
 h1 {
   text-align: center;
   font-size: 75px;
   margin: -10px;
+  text-shadow: -1px 0 palevioletred, 0 1px palevioletred, 1px 0 palevioletred, 0 -1px palevioletred;
 }
 
 h2 {
   font-size: 40px;
+  text-shadow: -1px 0 palevioletred, 0 1px palevioletred, 1px 0 palevioletred, 0 -1px palevioletred;
 }
 
 p {
   font-size: 25px;
+  text-shadow: -1px 0 palevioletred, 0 1px palevioletred, 1px 0 palevioletred, 0 -1px palevioletred;
 }
 
 #start {
@@ -47,14 +52,19 @@ p {
   background-color: pink;
 }
 
-body {
+.gamePage {
+  background-image: url('https://webstockreview.net/images/clipart-candy-borders-2.png');
+  background-size: cover;
+  background-repeat: no-repeat;
   background-color: lightskyblue;
+  margin: auto;
 }
 
 .gameHeader {
   font-family: 'Bubblegum Sans', cursive;
   color: white;
-  margin: 20px;
+  text-shadow: -1px 0 palevioletred, 0 1px palevioletred, 1px 0 palevioletred, 0 -1px palevioletred;
+  margin: 50px;
 }
 
 #game-board {
@@ -62,6 +72,8 @@ body {
   grid-template-columns: 120px 120px 120px 120px 120px 120px 120px 120px 120px 120px;
   grid-template-rows: 120px 120px 120px 120px 120px;
   justify-content: center;
+  margin: auto;
+  position: relative;
 }
 
 .space {
@@ -105,7 +117,7 @@ body {
 .playerTwo {
   width: 45px;
   height: 45px;
-  background-image: url('https://www.pinclipart.com/picdir/big/569-5697512_peppermint-candy-png-clipart.png');
+  background-image: url('https://clipartcraft.com/images/candy-clipart-swirl.png');
   background-size: contain;
   position: relative;
   margin: 5px;
@@ -142,8 +154,27 @@ body {
   border: 2px solid white;
   color: white;
   transition-duration: 0.4s;
+  margin-bottom: 100px;
 }
 
 #resetButton:hover {
   background-color: pink;
+}
+
+h3 {
+  font-family: 'Bubblegum Sans', cursive;
+  color: white;
+  text-shadow: -1px 0 palevioletred, 0 1px palevioletred, 1px 0 palevioletred, 0 -1px palevioletred;
+  font-size: 20px;
+}
+
+#cardColor {
+  font-family: 'Bubblegum Sans', cursive;
+  color: white;
+  text-shadow: -1px 0 palevioletred, 0 1px palevioletred, 1px 0 palevioletred, 0 -1px palevioletred;
+  font-size: 20px;
+}
+
+.card-red {
+
 }

@@ -21,8 +21,6 @@ gamePlayed = false
 
 let boardColors = ['red', 'purple', 'yellow', 'blue', 'orange', 'green']
 
-console.log(spaces)
-
 class Deck {
   constructor() {
     this.deck = []
@@ -40,27 +38,22 @@ let createPlayers = () => {
   startSpace.appendChild(playerTwo)
 }
 createPlayers()
-console.log(playerOne)
 
 let playerOnePosition = playerOne.parentNode.id
 
-console.log(playerOnePosition)
-
 let playerTwoPosition = playerTwo.parentNode.id
 
-console.log(playerTwoPosition)
-
 const colorDeck = new Deck()
-console.log(colorDeck.deck)
 
 let drawCard = () => {
   let randomCard = Math.floor(Math.random() * colorDeck.deck.length)
   cardDrawn = colorDeck.deck[randomCard]
-  console.log(cardDrawn)
-  cardColor.innerText = `You have drawn a ${cardDrawn} card!`
+  cardColor.innerText = `Player ${
+    turn === 1 ? 'One' : 'Two'
+  } has drawn a ${cardDrawn} card!`
   boardMovement(cardDrawn)
   turn *= -1
-  playersTurn.innerText = `It's time for player ${
+  playersTurn.innerText = `It is time for Player ${
     turn === 1 ? 'One' : 'Two'
   } to choose a card!`
 }
@@ -70,7 +63,6 @@ drawCardButton.addEventListener('click', drawCard)
 const boardMovement = (color) => {
   let spaceArray = []
   const colorSpaces = document.querySelectorAll(`.${color}`)
-  console.log(colorSpaces)
   playerOnePosition = playerOne.parentNode.id
   playerTwoPosition = playerTwo.parentNode.id
 
@@ -80,11 +72,9 @@ const boardMovement = (color) => {
   spaceArray.sort((a, b) => {
     return a - b
   })
-  console.log(spaceArray)
   if (turn === 1) {
     spaceArray.some((space) => {
       if (space > parseInt(playerOnePosition)) {
-        console.log(`Player One nextSpace is ${space}`)
         let newSpace = space.toString()
         const newDiv = document.getElementById(newSpace)
         newDiv.appendChild(playerOne)
@@ -95,7 +85,6 @@ const boardMovement = (color) => {
   } else {
     spaceArray.some((space) => {
       if (space > parseInt(playerTwoPosition)) {
-        console.log(`Player Two nextSpace is ${space}`)
         let newSpace = space.toString()
         const newDiv = document.getElementById(newSpace)
         newDiv.appendChild(playerTwo)
@@ -108,8 +97,6 @@ const boardMovement = (color) => {
 
 const gameWinner = () => {
   playerOnePosition = parseInt(playerOne.parentNode.id)
-  console.log('This should be player one postion: ', playerOnePosition)
-  console.log(winSpace)
   if (playerOnePosition === winSpace) {
     winner.innerText = `Player One has won the game!`
     gamePlayed = true
@@ -117,7 +104,6 @@ const gameWinner = () => {
     return
   }
   playerTwoPosition = parseInt(playerTwo.parentNode.id)
-  console.log(playerTwoPosition)
   if (playerTwoPosition === winSpace) {
     winner.innerText = `Player Two has won the game!`
     gamePlayed = true
