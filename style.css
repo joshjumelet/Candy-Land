@@ -64,7 +64,15 @@ p {
   font-family: 'Bubblegum Sans', cursive;
   color: white;
   text-shadow: -1px 0 palevioletred, 0 1px palevioletred, 1px 0 palevioletred, 0 -1px palevioletred;
-  margin: 50px;
+  margin: 30px;
+}
+
+.returnHome {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
 }
 
 #game-board {
@@ -132,7 +140,7 @@ p {
 #draw-card {
   background-color: palevioletred;
   font-family: 'Bubblegum Sans', cursive;
-  font-size: 15px;
+  font-size: 20px;
   padding: 6px 18px;
   border-radius: 8px;
   border: 2px solid white;

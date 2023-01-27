@@ -1,4 +1,5 @@
 // Variables //
+
 const spaces = document.querySelectorAll('.space')
 
 const gameboard = document.querySelector('#game-board')
@@ -21,6 +22,8 @@ gamePlayed = false
 
 let boardColors = ['red', 'purple', 'yellow', 'blue', 'orange', 'green']
 
+// Deck Object //
+
 class Deck {
   constructor() {
     this.deck = []
@@ -30,6 +33,10 @@ class Deck {
     }
   }
 }
+
+const colorDeck = new Deck()
+
+// Create Player Funtion & Deploy Token to Starting Space //
 
 let createPlayers = () => {
   playerOne.classList.add('playerOne')
@@ -43,7 +50,7 @@ let playerOnePosition = playerOne.parentNode.id
 
 let playerTwoPosition = playerTwo.parentNode.id
 
-const colorDeck = new Deck()
+// Drawing Card Function //
 
 let drawCard = () => {
   let randomCard = Math.floor(Math.random() * colorDeck.deck.length)
@@ -59,6 +66,8 @@ let drawCard = () => {
 }
 
 drawCardButton.addEventListener('click', drawCard)
+
+// Player Token Movement Across the Board //
 
 const boardMovement = (color) => {
   let spaceArray = []
@@ -95,6 +104,8 @@ const boardMovement = (color) => {
   }
 }
 
+// Declare Winner Function //
+
 const gameWinner = () => {
   playerOnePosition = parseInt(playerOne.parentNode.id)
   if (playerOnePosition === winSpace) {
@@ -111,6 +122,8 @@ const gameWinner = () => {
     return
   }
 }
+
+// End of Game and Reset Function //
 
 const endGame = () => {
   if (gamePlayed === true) {
